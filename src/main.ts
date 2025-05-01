@@ -1,7 +1,9 @@
 import { createApp } from 'vue'
 import '@/style.css'
 import App from '@/App.vue'
-import { loadEnv } from '@/utils/app'
+import { loadEnv } from '@/env'
+import { loadI18n } from '@/lang/loader'
+import { loadRouter } from '@/router'
 
 /** tạo app */
 const APP = createApp(App)
@@ -10,6 +12,12 @@ const APP = createApp(App)
 async function load(){
   // load biến môi trường
   await loadEnv()
+
+  // load ngôn ngữ
+  await loadI18n(APP)
+
+  // load router
+  await loadRouter(APP)
 
   // mount app vào DOM
   APP.mount('#app')

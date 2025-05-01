@@ -1,7 +1,7 @@
 
 
 <template>
-  <p class="text-red-500">Hơ lâu quơ</p>
+  <RouterView />
 </template>
 <script setup lang="ts">
 </script>
