@@ -1,3 +1,4 @@
+/** Interface của 1 đối tượng sử dụng để thao tác với local storeage */
 interface ILocalStorage {
   /** Lưu dữ liệu vào localStorage */
   set(key: string, value: string): void

@@ -2,7 +2,7 @@
  * Sử dụng để nhận và gửi sự kiện khi giao tiếp với iframe cha
  * */
 
-/** Khái báo thông tin app */
+/** Khai báo thông tin app */
 interface AppInterface {
   /** ID của app theo patten vn.merchant.app_name */
   app_id: string;
@@ -10,10 +10,14 @@ interface AppInterface {
   env: string;
 }
 
+/** Chứa các giao thích để giao tiếp với iframe merchant */
 class App implements AppInterface {
+  /** id của app hiện tại */
   app_id: string;
+  /** môi trường app đang được chạy */
   env: string;
 
+  /** Khởi tạo app với id và môi trường chạy */
   constructor() {
     this.app_id = "vn.merchant.example";
     this.env =
